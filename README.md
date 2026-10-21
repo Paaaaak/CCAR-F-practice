@@ -37,7 +37,7 @@ In the order of the course.
 | Evaluate a prompt change on a test set | `evaluate.py` | `python evaluate.py` - two system prompts, same cases, scored by code and by a model grader |
 | Your first tool call, end to end | `tool_call.py` | `python tool_call.py` - `tools=`, `stop_reason == "tool_use"`, run the function, send `tool_result` back |
 | Schema-valid output from Claude | `extract.py` | `python extract.py` - `output_config.format` with a JSON schema |
-| Validate, then retry with the error | `validate.py` (start: `starting-points/p08_validate.start.py`) | `python validate.py` - schema-valid is not business-valid; retry once with the exact error |
+| Validate, then retry with the error | `validate.py` (start: `starting-points/p08_validate.start.py`) | `python validate.py` - schema-valid is not business-valid; send the exact error back and retry, up to three attempts |
 | BUILD: ShopAssist extracts return requests | `build_extract.py`, `emails/` | `python build_extract.py` - five emails in, `return_requests.json` out |
 | The agentic loop in code | `agent_loop.py` | `python agent_loop.py` - loop while `stop_reason == "tool_use"` |
 | Structured tool errors in code | `tool_errors.py` (start: `starting-points/p11_tool_errors.start.py`) | `python tool_errors.py` - tools return `isError`, `errorCategory`, `isRetryable`, `customerMessage`, `developerMessage` |
